@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Svg Morphing</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <div class="logo">Val Duca</div>
+        <div class="toggleOverlay">Catalog</div>
+      </div>
+      <div class="title">Classic Cuvees</div>
+    </div>
+    <div class="sodas">
+      <div class="wrapper">
+        <svg
+          class="transition"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          <path
+            class="path"
+            stroke="#36301D"
+            fill="#36301D"
+            stroke-width="2px"
+            dur="10s"
+            vector-effect="non-scaling-stroke"
+            d="M 0 100 V 100 Q 50 100 100 100 V 100 z"
+          ></path>
+          <animateMotion dur="10s" repeatCount="indefinite">
+            <mpath xlink:href="#path" />
+          </animateMotion>
+          <div class="wrap">
+            <div class="block">
+              <div class="product">
+                <img src="./images/coca-cola.png" alt="" />
+              </div>
+            </div>
+            <div class="block">
+              <div class="product">
+                <img src="./images/fanta.png" alt="" />
+              </div>
+            </div>
+            <div class="block">
+              <div class="product">
+                <img src="./images/pepsi.png" alt="" />
+              </div>
+            </div>
+            <div class="block">
+              <div class="product">
+                <img src="./images/prime.webp" alt="" />
+              </div>
+            </div>
+            <div class="block">
+              <div class="product">
+                <img src="./images/sprite.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </svg>
+      </div>
+      <button class="closeBtn">Close</button>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
